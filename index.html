@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suplex - Watch Collection</title>
+    <!-- <script src="https://cdn.tailwindcss.com"> -->
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/output.css">
+
+    <style>
+        
+        @font-face {
+            font-family: 'BespokeStencil-Light';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Light.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-LightItalic';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-LightItalic.otf') format('opentype');
+            font-weight: 300;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-Regular';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-Italic';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Italic.otf') format('opentype');
+            font-weight: 400;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-Medium';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Medium.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-MediumItalic';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-MediumItalic.otf') format('opentype');
+            font-weight: 500;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-Bold';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-BoldItalic';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-BoldItalic.otf') format('opentype');
+            font-weight: 700;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-Extrabold';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Extrabold.otf') format('opentype');
+            font-weight: 800;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-ExtraboldItalic';
+            src: url('asset/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-ExtraboldItalic.otf') format('opentype');
+            font-weight: 800;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-Variable';
+            src: url('asset/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-Variable.woff2') format('woff2'),
+                url('asset/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-Variable.woff') format('woff'),
+                url('asset/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-Variable.ttf') format('truetype');
+            font-weight: 300 800;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BespokeStencil-VariableItalic';
+            src: url('asset/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-VariableItalic.woff2') format('woff2'),
+                url('asset/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-VariableItalic.woff') format('woff'),
+                url('asset/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-VariableItalic.ttf') format('truetype');
+            font-weight: 300 800;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Zodiak-Thin';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Thin.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Thin.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Thin.ttf') format('truetype');
+            font-weight: 100;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-ThinItalic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-ThinItalic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-ThinItalic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-ThinItalic.ttf') format('truetype');
+            font-weight: 100;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Zodiak-Light';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Light.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Light.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-LightItalic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-LightItalic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-LightItalic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-LightItalic.ttf') format('truetype');
+            font-weight: 300;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Zodiak-Regular';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Regular.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Regular.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-Italic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Italic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Italic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Zodiak-Bold';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Bold.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Bold.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-BoldItalic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BoldItalic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BoldItalic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BoldItalic.ttf') format('truetype');
+            font-weight: 700;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Zodiak-Extrabold';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Extrabold.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Extrabold.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Extrabold.ttf') format('truetype');
+            font-weight: 800;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-ExtraboldItalic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-ExtraboldItalic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-ExtraboldItalic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-ExtraboldItalic.ttf') format('truetype');
+            font-weight: 800;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Zodiak-Black';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Black.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Black.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-BlackItalic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BlackItalic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BlackItalic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BlackItalic.ttf') format('truetype');
+            font-weight: 900;
+            font-display: swap;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Zodiak-Variable';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Variable.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Variable.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-Variable.ttf') format('truetype');
+            font-weight: 100 900;
+            font-display: swap;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Zodiak-VariableItalic';
+            src: url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-VariableItalic.woff2') format('woff2'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-VariableItalic.woff') format('woff'),
+                url('asset/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-VariableItalic.ttf') format('truetype');
+            font-weight: 100 900;
+            font-display: swap;
+            font-style: italic;
+        }
+
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+        html {
+            scroll-behavior: smooth;
+        }
+        html,
+        body {
+            overscroll-behavior: none;
+        }
+
+        /* ── Footer specific styles ── */
+        .footer-wrapper {
+            position: relative;
+            z-index: 20;
+            margin-top: 2rem; /* some spacing from previous section */
+        }
+
+        /* The expandable panel – hidden by default, slides up from below the bar */
+        .footer-panel {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(52, 21, 57, 0.85);
+            backdrop-filter: blur(20px) saturate(1.6);
+            -webkit-backdrop-filter: blur(20px) saturate(1.6);
+            border: 1px solid rgba(255, 215, 150, 0.08);
+            border-bottom: none;
+            border-radius: 20px 20px 0 0;
+            padding: 2rem 2rem 1.5rem;
+            box-shadow: 0 -12px 60px rgba(0, 0, 0, 0.4);
+            transform: translateY(10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            will-change: transform, opacity;
+            /* We'll use GSAP for animation, but fallback with CSS transitions */
+        }
+
+        .footer-wrapper:hover .footer-panel {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Glass bar – always visible */
+        .footer-bar {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(18px) saturate(1.4);
+            -webkit-backdrop-filter: blur(18px) saturate(1.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .footer-wrapper:hover .footer-bar {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 215, 150, 0.18);
+            box-shadow: 0 -12px 60px rgba(180, 120, 70, 0.15);
+        }
+
+        /* Menu columns */
+        .footer-menu-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .footer-menu-col h1 {
+            font-family: 'BespokeStencil-Medium', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: rgba(242, 212, 170, 0.7);
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.2s ease;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-menu-col h1:hover {
+            color: #f2d4aa;
+            transform: translateX(4px);
+            border-bottom-color: rgba(242, 212, 170, 0.15);
+        }
+
+        .footer-copyright {
+            font-family: 'Zodiak-Light', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            color: rgba(255, 215, 150, 0.25);
+            text-align: center;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255, 215, 150, 0.05);
+            padding-top: 1rem;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .footer-panel {
+                padding: 1.5rem 1rem;
+                border-radius: 16px 16px 0 0;
+            }
+            .footer-menu-col h1 {
+                font-size: 0.7rem;
+            }
+            .footer-bar {
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-menu-col h1 {
+                font-size: 0.6rem;
+            }
+            .footer-panel .flex-wrap {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'bespoke-medium-italic': ['BespokeStencil-MediumItalic', 'sans-serif'],
+                        'bespoke-regular': ['BespokeStencil-Regular', 'sans-serif'],
+                        'bespoke-bold': ['BespokeStencil-Bold', 'sans-serif'],
+                        'zodiak-thin': ['Zodiak-Thin', 'sans-serif'],
+                        'zodiak-thin-italic': ['Zodiak-ThinItalic', 'sans-serif'],
+                        'zodiak-light': ['Zodiak-Light', 'sans-serif'],
+                        'zodiak-light-italic': ['Zodiak-LightItalic', 'sans-serif'],
+                        'zodiak-regular': ['Zodiak-Regular', 'sans-serif'],
+                        'zodiak-italic': ['Zodiak-Italic', 'sans-serif'],
+                        'zodiak-bold': ['Zodiak-Bold', 'sans-serif'],
+                        'zodiak-bold-italic': ['Zodiak-BoldItalic', 'sans-serif'],
+                        'zodiak-extrabold': ['Zodiak-Extrabold', 'sans-serif'],
+                        'zodiak-extrabold-italic': ['Zodiak-ExtraboldItalic', 'sans-serif'],
+                        'zodiak-black': ['Zodiak-Black', 'sans-serif'],
+                        'zodiak-black-italic': ['Zodiak-BlackItalic', 'sans-serif'],
+                        'zodiak-variable': ['Zodiak-Variable', 'sans-serif'],
+                        'zodiak-variable-italic': ['Zodiak-VariableItalic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="p-5 h-dvh w-dvw bg-[#1d0601]">
+    <main class="w-full h-full rounded-[20px] bg-[#341539] text-[#cfc8d1] overflow-x-hidden overflow-y-scroll">
+
+        <!-- LANDING -->
+        <section class="bg-blue-900 h-full w-full rounded-[20px] sticky top-0" id="landing_sec">
+            <div class="relative w-full h-full mx-auto aspect-video overflow-hidden rounded-[20px]">
+                <canvas id="sequenceCanvas" class="w-full h-full block sticky top-0 absolute"></canvas>
+            </div>
+        </section>
+
+        <!-- TAGLINE -->
+        <section class="h-full w-full p-2 md:p-[100px] font-bespoke-medium-italic text-[#f2d4aa]">
+            <div class="flex flex-col h-full">
+                <div class="h-[50%] align-top text-left">
+                    <h1 class="text-[80px] font-medium uppercase tracking-[5px] landing-[96px]" id="tagLine">
+                        Time is Your gratest asset <br /> wear it well
+                    </h1>
+                </div>
+                <div class="h-[50%] text-start flex justify-between items-end">
+                    <h1 class="text-[50px] font-BespokeStencil-Medium text-[#f7c681] tracking-[6px] leading-[60px]" id="brandmsg">
+                        If you want something a bit different <br /> you could also go with: <br /> "Crafting timeless
+                        <br /> moments on your wrist,"<br /> elegance for every moment.
+                    </h1>
+                    <button class="cursor-pointer text-[52px] font-light tracking-[8px] flex items-center justify-center">
+                        enquiry
+                        <i class="ri-arrow-right-long-line pt-4"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <section class="bg-gray-900 h-[40dvh] w-full rounded-[10px] top-0 overflow-x-hidden flex text-[2rem] md:text-[20rem] text-nowrap font-zodiak-bold-italic">
+            <div class="flex shrink-0 h-full" id="marqueeScroller">
+                <div class="h-full flex items-center overflow-y-hidden">
+                    <h1 class="px-[20px] py-[20px] uppercase">Every second counts</h1>
+                    <img src="./asset/watch/wrist-watch.png" alt="Watch" class="h-[100px] md:h-[300px] w-[100px] md:w-[720px] mx-[10px]" />
+                    <h1 class="px-[20px] py-[20px] uppercase">Stay on time</h1>
+                    <img src="./asset/watch/wristwatch.png" alt="Watch 1" class="h-[100px] md:h-[300px] w-[100px] md:w-[720px] mx-[10px]" />
+                    <h1 class="px-[20px] py-[20px] uppercase">Never miss a moment</h1>
+                    <img src="./asset/watch/stop-watch.png" alt="Watch 1" class="h-[100px] md:h-[300px] w-[100px] md:w-[320px] mx-[10px] ml-10 mr-20" />
+                </div>
+                <div class="h-full flex items-center overflow-y-hidden">
+                    <h1 class="px-[20px] py-[20px] uppercase">Every second counts</h1>
+                    <img src="./asset/watch/wrist-watch.png" alt="Watch" class="h-[100px] md:h-[300px] w-[100px] md:w-[720px] mx-[10px]" />
+                    <h1 class="px-[20px] py-[20px] uppercase">Stay on time</h1>
+                    <img src="./asset/watch/wristwatch.png" alt="Watch 1" class="h-[100px] md:h-[300px] w-[100px] md:w-[720px] mx-[10px]" />
+                    <h1 class="px-[20px] py-[20px] uppercase">Never miss a moment</h1>
+                    <img src="./asset/watch/stop-watch.png" alt="Watch 1" class="h-[100px] md:h-[300px] w-[100px] md:w-[320px] mx-[10px] ml-10 mr-20" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!--  NEW FOOTER – Hover‑activated glass panel with menu            -->
+        <!-- ============================================================ -->
+        <footer class="footer-wrapper w-full max-w-2xl mx-auto px-4 md:px-6 pb-2">
+            <!-- The expandable panel (hidden by default, appears on hover) -->
+            <div class="footer-panel">
+                <!-- three columns of links -->
+                <div class="flex flex-wrap justify-between gap-6 md:gap-12">
+                    <!-- Col 1 -->
+                    <div class="footer-menu-col flex-1 min-w-[120px]">
+                        <h1>The Global Concierge</h1>
+                        <h1>Commission Inquiries</h1>
+                        <h1>Estatae &amp; Aviation</h1>
+                    </div>
+                    <!-- Col 2 -->
+                    <div class="footer-menu-col flex-1 min-w-[120px]">
+                        <h1>The Founder's Vision</h1>
+                        <h1>Master Gastronomers</h1>
+                        <h1>The Flavour Vault</h1>
+                    </div>
+                    <!-- Col 3 -->
+                    <div class="footer-menu-col flex-1 min-w-[120px]">
+                        <h1>Client Anonymity</h1>
+                        <h1>Terms of Commission</h1>
+                        <h1>Palate Directives</h1>
+                    </div>
+                </div>
+                <!-- tagline & copyright -->
+                <div class="footer-copyright">
+                    <p class="text-[0.65rem] tracking-[0.2em] text-[rgba(255,215,150,0.2)]">
+                        dsf sfs fweefw rewr rwr
+                    </p>
+                    <p class="mt-2">2026 DreamCream. The Apex of Bespoke Gastronomy. All rights strictly reserved.</p>
+                </div>
+            </div>
+
+            <!-- The always‑visible glass bar -->
+            <div class="footer-bar flex flex-wrap items-center justify-between gap-3">
+                <!-- left: brand -->
+                <div class="flex items-center gap-3">
+                    <span class="font-bespoke-medium-italic text-[#f2d4aa] text-sm md:text-base tracking-widest opacity-80">
+                        Suplex
+                    </span>
+                    <span class="hidden sm:inline-block w-px h-6 bg-gradient-to-b from-transparent via-[rgba(255,215,150,0.15)] to-transparent"></span>
+                    <span class="footer-copy hidden sm:inline text-[0.6rem] text-[rgba(255,215,150,0.25)]">
+                        &copy; 2026
+                    </span>
+                </div>
+
+                <!-- center: scroll‑up button (optional) -->
+                <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+                        class="group flex items-center gap-2 px-4 py-1.5 rounded-full
+                               bg-[rgba(255,215,150,0.05)] border border-[rgba(255,215,150,0.08)]
+                               text-[#f2d4aa] text-xs tracking-widest uppercase
+                               transition-all duration-300 hover:bg-[rgba(255,215,150,0.12)]
+                               hover:border-[rgba(255,215,150,0.2)] hover:shadow-lg hover:shadow-[rgba(180,120,70,0.1)]">
+                    <i class="ri-arrow-up-wide-line text-base group-hover:-translate-y-0.5 transition-transform"></i>
+                    <span class="hidden xs:inline">Top</span>
+                </button>
+
+                <!-- right: social icons -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="text-[rgba(255,215,150,0.4)] hover:text-[#f2d4aa] transition-colors text-sm">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="#" class="text-[rgba(255,215,150,0.4)] hover:text-[#f2d4aa] transition-colors text-sm">
+                        <i class="ri-pinterest-line"></i>
+                    </a>
+                    <a href="#" class="text-[rgba(255,215,150,0.4)] hover:text-[#f2d4aa] transition-colors text-sm">
+                        <i class="ri-youtube-line"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="./index.js"></script>
+    <script>
+        // Optional GSAP enhancement for smoother entrance
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.footer-wrapper');
+            if (wrapper) {
+                gsap.from(wrapper, {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: wrapper,
+                        start: 'top bottom-=60',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

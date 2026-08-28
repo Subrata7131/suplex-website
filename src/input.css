@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+    --font-bespoke-medium-italic: 'BespokeStencil-MediumItalic', sans-serif;
+    --font-bespoke-regular: 'BespokeStencil-Regular', sans-serif;
+    --font-bespoke-bold: 'BespokeStencil-Bold', sans-serif;
+
+    /* Zodiak */
+    --font-zodiak-thin: 'Zodiak-Thin', sans-serif;
+    --font-zodiak-thin-italic: 'Zodiak-ThinItalic', sans-serif;
+    --font-zodiak-light: 'Zodiak-Light', sans-serif;
+    --font-zodiak-light-italic: 'Zodiak-LightItalic', sans-serif;
+    --font-zodiak-regular: 'Zodiak-Regular', sans-serif;
+    --font-zodiak-italic: 'Zodiak-Italic', sans-serif;
+    --font-zodiak-bold: 'Zodiak-Bold', sans-serif;
+    --font-zodiak-bold-italic: 'Zodiak-BoldItalic', sans-serif;
+    --font-zodiak-extrabold: 'Zodiak-Extrabold', sans-serif;
+}
+
+@source "../index.html";
+@source "../index.js";
