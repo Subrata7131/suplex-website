@@ -30,7 +30,7 @@ gsap.from(brandMessage.chars, {
     opacity: 0.15,
     stagger: 0.3,
     scrollTrigger: {
-        //markers: true,
+        // markers: true,
         scroller: "main",
         start: "330% 80%",
         end: "330% 60%",
