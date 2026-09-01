@@ -438,102 +438,117 @@
             </div>
         </section>
 
-        <!-- ============================================================ -->
-        <!--  NEW FOOTER – Hover‑activated glass panel with menu            -->
-        <!-- ============================================================ -->
-        <footer class="footer-wrapper w-full max-w-2xl mx-auto px-4 md:px-6 pb-2">
-            <!-- The expandable panel (hidden by default, appears on hover) -->
-            <div class="footer-panel">
-                <!-- three columns of links -->
-                <div class="flex flex-wrap justify-between gap-6 md:gap-12">
-                    <!-- Col 1 -->
-                    <div class="footer-menu-col flex-1 min-w-[120px]">
-                        <h1>The Global Concierge</h1>
-                        <h1>Commission Inquiries</h1>
-                        <h1>Estatae &amp; Aviation</h1>
+        <footer class="h-10 flex items-end justify-center w-dvw ">
+
+            <div class="h-[40px] w-dvw md:w-[50dvw] flex justify-center items-end px-[20px] md:p-0 ">
+
+                <div class="bg-[#1d0601] h-[20px] w-[20px] relative  overflow-hidden hidden md:inline">
+                    <div class="
+                        absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 
+                        bg-[#341539] rounded-full w-[40px] h-[40px]
+                        ">
                     </div>
-                    <!-- Col 2 -->
-                    <div class="footer-menu-col flex-1 min-w-[120px]">
-                        <h1>The Founder's Vision</h1>
-                        <h1>Master Gastronomers</h1>
-                        <h1>The Flavour Vault</h1>
-                    </div>
-                    <!-- Col 3 -->
-                    <div class="footer-menu-col flex-1 min-w-[120px]">
-                        <h1>Client Anonymity</h1>
-                        <h1>Terms of Commission</h1>
-                        <h1>Palate Directives</h1>
+
+                </div>
+
+                <div
+                    class="bg-[#1d0601]/80 h-15 w-auto min-w-[140px] px-4 rounded-md flex justify-center items-center text-[#f2d65a] text-xl font-['BespokeStencil-Extrabold'] tracking-wide overflow-hidden mb-0 tran">
+                    <span onmouseenter="openFooter()" class="cursor-pointer">SUPLEX</span>
+
+                </div>
+
+                <div class="bg-[#1d0601] h-[20px] w-[20px] relative overflow-hidden hidden md:inline">
+                    <div class="absolute top-0 right-0 translate-x-1/2 
+                        -translate-y-1/2 bg-[#341539] rounded-full w-[40px] h-[40px]">
                     </div>
                 </div>
-                <!-- tagline & copyright -->
-                <div class="footer-copyright">
-                    <p class="text-[0.65rem] tracking-[0.2em] text-[rgba(255,215,150,0.2)]">
-                        dsf sfs fweefw rewr rwr
-                    </p>
-                    <p class="mt-2">2026 DreamCream. The Apex of Bespoke Gastronomy. All rights strictly reserved.</p>
-                </div>
+
             </div>
 
-            <!-- The always‑visible glass bar -->
-            <div class="footer-bar flex flex-wrap items-center justify-between gap-3">
-                <!-- left: brand -->
-                <div class="flex items-center gap-3">
-                    <span class="font-bespoke-medium-italic text-[#f2d4aa] text-sm md:text-base tracking-widest opacity-80">
-                        Suplex
-                    </span>
-                    <span class="hidden sm:inline-block w-px h-6 bg-gradient-to-b from-transparent via-[rgba(255,215,150,0.15)] to-transparent"></span>
-                    <span class="footer-copy hidden sm:inline text-[0.6rem] text-[rgba(255,215,150,0.25)]">
-                        &copy; 2026
-                    </span>
-                </div>
-
-                <!-- center: scroll‑up button (optional) -->
-                <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
-                        class="group flex items-center gap-2 px-4 py-1.5 rounded-full
-                               bg-[rgba(255,215,150,0.05)] border border-[rgba(255,215,150,0.08)]
-                               text-[#f2d4aa] text-xs tracking-widest uppercase
-                               transition-all duration-300 hover:bg-[rgba(255,215,150,0.12)]
-                               hover:border-[rgba(255,215,150,0.2)] hover:shadow-lg hover:shadow-[rgba(180,120,70,0.1)]">
-                    <i class="ri-arrow-up-wide-line text-base group-hover:-translate-y-0.5 transition-transform"></i>
-                    <span class="hidden xs:inline">Top</span>
-                </button>
-
-                <!-- right: social icons -->
-                <div class="flex items-center gap-3">
-                    <a href="#" class="text-[rgba(255,215,150,0.4)] hover:text-[#f2d4aa] transition-colors text-sm">
-                        <i class="ri-instagram-line"></i>
-                    </a>
-                    <a href="#" class="text-[rgba(255,215,150,0.4)] hover:text-[#f2d4aa] transition-colors text-sm">
-                        <i class="ri-pinterest-line"></i>
-                    </a>
-                    <a href="#" class="text-[rgba(255,215,150,0.4)] hover:text-[#f2d4aa] transition-colors text-sm">
-                        <i class="ri-youtube-line"></i>
-                    </a>
-                </div>
-            </div>
         </footer>
+
+        
+        <div class="w-full flex items-center justify-center fixed top-[100%] left-0" id="footerOpend"
+            onmouseleave="closeFooter()">
+        
+            
+            <div class="h-[285px] w-[500px] flex justify-center items-end px-[10px] mb-5">
+        
+                
+                <div
+                    class="bg-[#341539]/50 backdrop-blur-sm h-full w-[500px] rounded-t-[20px] flex flex-col items-center text-[#7d3c98] overflow-hidden p-2 md:p-2">
+        
+                    
+                    <div
+                        class="w-full h-[60%] px-0 md:px-0 py-0 flex justify-between items-start text-[#dcc7ae] font-['BespokeStencil'] font-light text-[14px] md:text-[16px] tracking-[1px]">
+        
+                        
+                        <div class="flex flex-col justify-between items-start h-full flex-1 space-y-1">
+                            <h1 class="cursor-pointer p-1">The Global Concierge</h1>
+                            <h1 class="cursor-pointer p-1">Commission Inquiries</h1>
+                            <h1 class="cursor-pointer p-1">Estatae & Aviation</h1>
+                        </div>
+        
+                        
+                        <div class="flex flex-col justify-between items-start h-full flex-1 space-y-1">
+                            <h1 class="cursor-pointer p-1">The Founder's Vision</h1>
+                            <h1 class="cursor-pointer p-1">Master Gastronomers</h1>
+                            <h1 class="cursor-pointer p-1">The Flavour Vault</h1>
+                        </div>
+        
+                        
+                        <div class="flex flex-col justify-between items-start h-full flex-1 space-y-1">
+                            <h1 class="cursor-pointer p-1">Client Anonymity</h1>
+                            <h1 class="cursor-pointer p-1">Terms of Commission</h1>
+                            <h1 class="cursor-pointer p-1">Palate Directives</h1>
+                        </div>
+        
+                    </div>
+        
+                    
+                    <div
+                        class="w-full text-[#f7c681] font-['BespokeStencil'] text-[14px] flex justify-between items-center flex-col mt-5px">
+                        
+                        <h1 class="tracking-[1px] pt-8 pb-2 text-center opacity-80 ">2026 Suplex. The Apex of Bespoke
+                            Gastronomy. All rights strictly reserved.</h1>
+                    </div>
+        
+                    
+                    <button
+                        class="static top-3 right-3 h-[40px] w-[40px] rounded-[16px] text-center bg-[#7d3c98]/80 text-white flex justify-center items-center hover:bg-[#7d3c98] transition mt-5px"
+                        onclick="closeFooter()">
+                        <i class="ri-arrow-down-wide-line text-2xl"></i>
+                    </button>
+        
+                </div>
+            </div>
+        </div>
+
+
+
 
     </main>
 
     <script src="./index.js"></script>
     <script>
-        // Optional GSAP enhancement for smoother entrance
-        document.addEventListener('DOMContentLoaded', () => {
-            const wrapper = document.querySelector('.footer-wrapper');
-            if (wrapper) {
-                gsap.from(wrapper, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.9,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: wrapper,
-                        start: 'top bottom-=60',
-                        toggleActions: 'play none none none'
-                    }
-                });
-            }
-        });
+
+        const openFooter = () => {
+            gsap.to("#footerOpend", {
+                yPercent: -100,  // Pulls it up by its exact calculated height
+                y: -20,          // Offsets it to match the 20px padding (p-5) of the body
+                duration: 0.6,
+                ease: "power4.out"
+            });
+        };
+
+        const closeFooter = () => {
+            gsap.to("#footerOpend", {
+                yPercent: 0,     // Pushes it right back off-screen
+                y: 0,
+                duration: 0.5,
+                ease: "power4.inOut"
+            });
+        };
     </script>
 
 </body>
